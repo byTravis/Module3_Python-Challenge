@@ -25,7 +25,7 @@ with open(csvPath, 'r') as budgetCSV:
         currentTotal= int(row[1])
         if prevTotal != 0:
             monthlyDifference.append(currentTotal - prevTotal)
-            change=change-int(currentTotal)
+            change=change+(currentTotal - prevTotal)
             
             #updates greatest increase/decrease
             if currentTotal - prevTotal > greatestIncrease[1]:
@@ -41,22 +41,20 @@ with open(csvPath, 'r') as budgetCSV:
 
         else:      #sets initial values on the first row of data      
             prevTotal = int(row[1])
-            change = int(row[1])
+
 
 
         monthCount +=1
         totalProfitLoss += int(row[1])
 
 
-print(len(monthlyDifference))
-print(change)
 
 # generate final report
 print("Financial Analysis")
 print("----------------------------")
 print (f"Total Months:  {monthCount}")
 print(f"Total:  ${totalProfitLoss}")
-# print(f"Average Change:  ${averageChange}")
+print(f"Average Change:  $" + str(round(change/(monthCount-1), 2)))
 print(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})")
 print(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})")
 
