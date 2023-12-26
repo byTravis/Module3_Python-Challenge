@@ -1,8 +1,8 @@
 # Python Challenge
 Week 3 - Data Analytics Boot Camp - University of Oregon
-
-![PyBank Challenge](/Images/revenue-per-lead.png)
 ## PyBank Challenge
+![PyBank Challenge](/Images/revenue-per-lead.png)
+
 ### Objective:
 You are tasked with creating a Python script to analyze the financial records of your company.
 
@@ -17,8 +17,12 @@ Your task is to create a Python script that analyzes the records to calculate ea
 * Export a report as txt file to the Analysis folder.
 
 
-![PyBank Challenge](/Images/Vote_counting.png)
+---
+
+
 ## PyPoll Challenge
+![PyBank Challenge](/Images/Vote_counting.png)
+
 ### Objective:
 You are tasked with helping a small, rural town modernize its vote-counting process.
 
